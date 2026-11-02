@@ -1,14 +1,19 @@
-# 这些路径的默认审核人。按需替换为团队 GitHub 用户名。
+# 这些路径的默认审核人。
+# 当前任务 A/B/C/E/F 尚未分配到具体人，暂以仓库 owner 兜底。
+# 任务分配后请按角色更新为对应 GitHub 用户名。
+
 # 仓库全局默认审核人
-*                           @team-lead
+*                           @aizixidexuefen
 
 # 源码
-/src/contest_team/          @team-lead @backend
+/src/contest_team/          @aizixidexuefen
 
-# 文档与协作规范
-/docs/                      @pm
-/CONTRIBUTING.md            @pm
-/.github/                   @team-lead
+# 文档与协作规范（context.md / agent-rules.md / collaboration.md）
+/docs/                      @aizixidexuefen
+/CONTRIBUTING.md            @aizixidexuefen
 
-# 探针产物
-/docs/spike/                @spike-owner
+# CI / 模板 / 仓库配置
+/.github/                   @aizixidexuefen
+
+# 探针产物（待 F 同学分配后更新）
+/docs/spike/                @aizixidexuefen
