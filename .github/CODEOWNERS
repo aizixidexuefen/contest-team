@@ -1,0 +1,14 @@
+# 这些路径的默认审核人。按需替换为团队 GitHub 用户名。
+# 仓库全局默认审核人
+*                           @team-lead
+
+# 源码
+/src/contest_team/          @team-lead @backend
+
+# 文档与协作规范
+/docs/                      @pm
+/CONTRIBUTING.md            @pm
+/.github/                   @team-lead
+
+# 探针产物
+/docs/spike/                @spike-owner
