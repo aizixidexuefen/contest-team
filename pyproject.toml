@@ -62,5 +62,6 @@ addopts = "-ra --strict-markers --cov=contest_team --cov-report=term-missing"
 
 [tool.mypy]
 python_version = "3.10"
-packages = ["src/contest_team"]
+packages = ["contest_team"]
+mypy_path = "src"
 strict = true
