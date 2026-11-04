@@ -25,8 +25,8 @@ classifiers = [
 
 dependencies = [
     "fastapi>=0.110",
-    "uvicorn[standard]>=0.28",
-    "pydantic>=2.0",
+    "uvicorn[standard]>=0.29",
+    "pydantic>=2.6",
     "sqlmodel>=0.0.16",
 ]
 
