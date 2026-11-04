@@ -33,7 +33,7 @@ jobs:
           python-version: "3.11"
           cache: pip
       - run: pip install -e ".[dev]"
-      - run: mypy
+      - run: mypy src
 
   test:
     name: Test (pytest)

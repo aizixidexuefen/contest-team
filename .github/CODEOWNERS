@@ -1,14 +1,14 @@
-# 这些路径的默认审核人。按需替换为团队 GitHub 用户名。
+# 默认先由仓库所有者审核；团队确认其他成员 GitHub 用户名后再按职责补充。
 # 仓库全局默认审核人
-*                           @team-lead
+*                           @aizixidexuefen
 
 # 源码
-/src/contest_team/          @team-lead @backend
+/src/contest_team/          @aizixidexuefen
 
 # 文档与协作规范
-/docs/                      @pm
-/CONTRIBUTING.md            @pm
-/.github/                   @team-lead
+/docs/                      @aizixidexuefen
+/CONTRIBUTING.md            @aizixidexuefen
+/.github/                   @aizixidexuefen
 
 # 探针产物
-/docs/spike/                @spike-owner
+/docs/spike/                @aizixidexuefen
