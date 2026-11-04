@@ -4,20 +4,22 @@
 
 ## 一、分支模型
 
-采用受保护的 trunk-based 工作流：
+采用受保护的轻量 GitFlow 工作流：
 
 | 分支          | 用途                 | 谁能直接推     |
 | ------------- | -------------------- | -------------- |
 | `main`        | 稳定可发布           | **禁止直推**   |
 | `develop`     | 集成分支             | **禁止直推**   |
 | `feature/*`   | 功能开发             | 个人           |
+| `docs/*`      | 文档任务             | 个人           |
 | `fix/*`       | 缺陷修复             | 个人           |
 | `spike/*`     | 技术探针（可丢弃）   | 个人           |
 | `release/*`   | 发布准备             | 维护者         |
 
-- 从 `develop` 切出 `feature/`、`fix/`、`spike/`。
+- 从 `develop` 切出 `feature/`、`docs/`、`fix/`、`spike/`。
 - 完成后提 PR 合回 `develop`；发布时由 `develop` 合 `main`。
 - `spike/*` 分支的产物只能落在 `docs/spike/`，不进 `src/`。
+- 分支名必须包含 Issue 编号，例如 `feature/issue-12-avatar-profile`、`docs/issue-8-context`。
 
 ## 二、提交信息规范
 
@@ -42,7 +44,8 @@ docs(context): 补充 MVP1 边界与非目标
 
 - PR 标题与提交类型保持一致。
 - 填写 `.github/PULL_REQUEST_TEMPLATE.md` 全部字段，空字段写 `无`。
-- PR 必须关联至少一个 Issue（探针类除外）。
+- 每个 PR 包括技术探针都必须关联至少一个 Issue。
+- PR 必须填写关联 Spec、AI 工具使用说明、测试证据、风险与回滚方案。
 - 通过 CI（lint + test）后方可请求 review。
 - 至少 **1 名** reviewer 批准，`main`/`develop` 方可合并。
 - 合并方式默认 **Squash merge**，保持线性历史。
